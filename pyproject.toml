@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pccz-list-documents"
+version = "0.1.0"
+description = "Streaming extractor for pccz list_documents.csv"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "beautifulsoup4>=4.12.0",
+  "olefile>=0.47",
+  "pdfplumber>=0.11.0",
+  "playwright>=1.54.0",
+  "pypdfium2>=5.6.0",
+  "python-docx>=1.1.0",
+  "rapidocr_onnxruntime>=1.2.3",
+  "requests>=2.31.0",
+  "striprtf>=0.0.29",
+  "tqdm>=4.66.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
